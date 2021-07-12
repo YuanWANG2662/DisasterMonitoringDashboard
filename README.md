@@ -8,9 +8,15 @@
 <h2> Functionality </h2> 
 
 <p> The proposed web application will implement the following functionalities:<p> 
-* ➢	Visualization of the basemap (OSM) and vector layer in the form of polygons (US states) showing the distribution of different types of disasters on state level in the US.
-* ➢	Attribute query like a state name search or an address search.
-* ➢	Spatial query which can be implemented in the form of an information pop-up when clicking on a certain state.
-* ➢	Downloadable data service.
-* ➢	Integration of statistical diagrams, indicating the characteristics of distribution of disasters.
-* ➢	Spatial-temporal visualisation realized through a time-slider. (taken as a non-goal for now)
+➢	Visualization of the basemap (OSM) and vector layer in the form of polygons (US states) showing the distribution of different types of disasters on state level in the US.
+  <br/> 
+➢	Attribute query like a state name search or an address search.
+  <br/> 
+➢	Spatial query which can be implemented in the form of an information pop-up when clicking on a certain state.
+  <br/> 
+➢	Downloadable data service.
+  <br/> 
+➢	Integration of statistical diagrams, indicating the characteristics of distribution of disasters.
+  <br/> 
+➢	Spatial-temporal visualisation realized through a time-slider. (taken as a non-goal for now)
+  <br/> 
