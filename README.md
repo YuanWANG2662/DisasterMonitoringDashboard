@@ -1,4 +1,5 @@
 <h1> Disaster Monitoring Dashboard </h1>
+<img src="https://github.com/YuanWANG2662/DisasterMonitoringDashboard/blob/main/dashboard.png">
 <h2> Description </h2>
 <p> Natural disasters are a fairly common phenomena occurring multiple times in various places. Many countries maintain a database of the occurring disasters, their severity, spatial and temporal extent. For a more comprehensive evaluation and view of the occurring disasters and to facilitate timely response, a disaster monitoring dashboard is proposed. This is suggested for the United States of America, as they currently implement a similar dashboard executed using ESRI products and built using python, they also have a well maintained dataset for the disasters that occur in the country.</p>
 
