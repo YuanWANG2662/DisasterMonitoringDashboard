@@ -190,7 +190,7 @@ function init() {
 
   // Set the osm search control 
   var search = new ol.control.SearchNominatim(
-    {	
+    {
       reverse: true,
       position: true	// Search, with priority to geo position
     });
@@ -200,8 +200,8 @@ function init() {
   search.on('select', function (e) {
     map.getView().animate({
       center: e.coordinate,
-      zoom: Math.max(map.getView().getZoom(),6)
-      
+      zoom: Math.max(map.getView().getZoom(), 6)
+
     });
   });
 
@@ -376,8 +376,8 @@ function init() {
   })
 
 
-  var disasterLayers = [total_disaster_layer,flood_layer,biological_layer,snow_layer,storm_layer,fire_layer,hurricane_layer,tornado_layer]
- 
+  var disasterLayers = [total_disaster_layer, flood_layer, biological_layer, snow_layer, storm_layer, fire_layer, hurricane_layer, tornado_layer]
+
   //add the legends according to the status of layer visibility
 
   map.addControl(totalDistLegendCtrl);
@@ -394,8 +394,8 @@ function init() {
       //totalDisasterLegend.style.display = "block";
       map.addControl(totalDistLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=total_disaster_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != total_disaster_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -415,8 +415,8 @@ function init() {
     if (flood_layer.getVisible() == true) {
       map.addControl(floodLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=flood_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != flood_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -434,8 +434,8 @@ function init() {
     if (biological_layer.getVisible() == true) {
       map.addControl(bioLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=biological_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != biological_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -453,8 +453,8 @@ function init() {
     if (snow_layer.getVisible() == true) {
       map.addControl(snowLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=snow_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != snow_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -472,8 +472,8 @@ function init() {
     if (storm_layer.getVisible() == true) {
       map.addControl(stormLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=storm_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != storm_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -491,8 +491,8 @@ function init() {
     if (fire_layer.getVisible() == true) {
       map.addControl(fireLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=fire_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != fire_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -510,8 +510,8 @@ function init() {
     if (hurricane_layer.getVisible() == true) {
       map.addControl(hurrLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=hurricane_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != hurricane_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -529,8 +529,8 @@ function init() {
     if (tornado_layer.getVisible() == true) {
       map.addControl(torLegendCtrl);
       //remove disaster layers overlapping 
-      for(var i = 0;i<disasterLayers.length;i++){
-        if(disasterLayers[i]!=tornado_layer){
+      for (var i = 0; i < disasterLayers.length; i++) {
+        if (disasterLayers[i] != tornado_layer) {
           disasterLayers[i].setVisible(false);
         }
       }
@@ -540,19 +540,19 @@ function init() {
   };
 
   //Charts -- Put the geoJSON objects into an array. 
-  let flood_layer1 = new ol.layer.Vector({
-    source: new ol.source.Vector({
-        format: new ol.format.GeoJSON(),
-        url: 'https://raw.githubusercontent.com/Ruphai/GeoApp/main/data/DisastersByStates_US.geojson'
-    }),
-    style: function(f) { return getFeatureStyle(f); }, 
-    //renderOrder: ol.ordering.yOrdering(),
-    visible: false,
-    title: "Disaster Charts"
-  });
-  map.addLayer(flood_layer1);
-  var select = new ol.interaction.Select({
-    style: function(f) { return getFeatureStyle(f, true); }
-  });
-  map.addInteraction(select);
+  // let flood_layer1 = new ol.layer.Vector({
+  //   source: new ol.source.Vector({
+  //       format: new ol.format.GeoJSON(),
+  //       url: 'https://raw.githubusercontent.com/Ruphai/GeoApp/main/data/DisastersByStates_US.geojson'
+  //   }),
+  //   style: function(f) { return getFeatureStyle(f); }, 
+  //   //renderOrder: ol.ordering.yOrdering(),
+  //   visible: false,
+  //   title: "Disaster Charts"
+  // });
+  // map.addLayer(flood_layer1);
+  // var select = new ol.interaction.Select({
+  //   style: function(f) { return getFeatureStyle(f, true); }
+  // });
+  // map.addInteraction(select);
 }
